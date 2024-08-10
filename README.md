@@ -22,3 +22,5 @@ docker tag aws-sandbox-server:latest 031028648877.dkr.ecr.eu-central-1.amazonaws
 docker push 031028648877.dkr.ecr.eu-central-1.amazonaws.com/microweb-containers:latest
 
 ```
+* ECS > Clusters > HelloWebCluster > Tasks > Task running with a Task Definition
+* in the Networking security group, the inboud rule for port 3000 needs to be added

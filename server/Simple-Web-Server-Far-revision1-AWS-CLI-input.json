@@ -1,0 +1,47 @@
+{
+    "family": "Simple-Web-Server-Far",
+    "containerDefinitions": [
+        {
+            "name": "hello-web-server",
+            "image": "031028648877.dkr.ecr.eu-central-1.amazonaws.com/microweb-containers:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "test-web-http",
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/Simple-Web-Server-Far",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "eu-central-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        }
+    ],
+    "executionRoleArn": "arn:aws:iam::031028648877:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    }
+}
