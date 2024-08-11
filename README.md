@@ -26,3 +26,12 @@ docker push 031028648877.dkr.ecr.eu-central-1.amazonaws.com/microweb-containers:
 ```
 * ECS > Clusters > HelloWebCluster > Tasks > Task running with a Task Definition
 * in the Networking security group, the inboud rule for port 3000 needs to be added
+
+# Pipeline tools
+* Perfect : https://docs-3.prefect.io/3.0rc/deploy/infrastructure-examples/docker
+* Metaflow : https://docs.metaflow.org/introduction/what-is-metaflow
+* AWS Step Functions
+* Dagster : https://dagster.io/
+* Flyte : https://flyte.org/
+* Argo Workflows : https://argo-workflows.readthedocs.io/en/latest/quick-start/
+* Custom Python and Docker
