@@ -1,14 +1,30 @@
-# serverless
+# Local to cloud
+The goal is to provide a development flow that covers mulitple deployment envirments using the same code base
+* Local native deployment using python venv and node installs
+* Docker containers with docker compose commands
+* Cloud deployment with Lambdas and ECS Fargate Tasks
+
+## Orchestration
+* Primary services are ones that manipulate data and those are subject to orchestration
+* Secondary services are stateless instant data transformation services
+* Orchestration is based on data flow only, which means that services do not exchange control events but rather events triggered on data production
+* Local ochestration is based on MQTT which mirrors main artifacts creation in cache (A main artifact is a cache path)
+* Global or cross services orchestatrion is based on an S3 bucket with lambdas for webhooks notification or services triggers
+
+## goal
+
+* Create an ECS task that watches an S3 Object, triggers when it is updated, process it then stops
+* Host stateless services for simple data transformation
+
+## related work
+* https://github.com/MicroWebStacks/copper
+* https://github.com/MicroWebStacks/markdown-rag-services
 
 # S3
 testing s3 access
 
-(used GPT4 assistance)
-test successful
-
 - created a bucket => BUCKET_NAME
-- created an access point on the Bucket => ACCESS_POINT_ARN
-- created IAM user with permission "AmazonS3FullAccess" => aws_access_key_id, aws_secret_access_key
+- provide perissions to IAM user
 
 # ECS
 

@@ -12,7 +12,6 @@ s3 = boto3.client('s3',
 
 # Your bucket and access point name
 BUCKET_NAME = os.getenv('BUCKET_NAME')
-ACCESS_POINT_ARN = os.getenv('ACCESS_POINT_ARN')  # replace region, account-id, and your-access-point-name accordingly
 
 # Upload a file
 file_name = 'test.txt'
