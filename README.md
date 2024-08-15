@@ -6,12 +6,12 @@ The goal is to provide a development flow that covers mulitple deployment envirm
 
 ## Orchestration
 * Primary services are ones that manipulate data and those are subject to orchestration
-* Secondary services are stateless instant data transformation services
+* Secondary services are used for stateless and instant data transformation such as REST API endpoints
 * Orchestration is based on data flow only, which means that services do not exchange control events but rather events triggered on data production
 * Local ochestration is based on MQTT which mirrors main artifacts creation in cache (A main artifact is a cache path)
 * Global or cross services orchestatrion is based on an S3 bucket with lambdas for webhooks notification or services triggers
 
-## goal
+## goals
 
 * Create an ECS task that watches an S3 Object, triggers when it is updated, process it then stops
 * Host stateless services for simple data transformation

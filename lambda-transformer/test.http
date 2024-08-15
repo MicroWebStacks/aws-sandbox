@@ -1,0 +1,7 @@
+POST https://dhyp6npwjucys6xhmkwcz6wfku0xqbhs.lambda-url.eu-central-1.on.aws/
+Content-Type: application/json
+
+{
+    "sentence":"rest call sentence",
+    "check":260
+}
